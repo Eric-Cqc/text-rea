@@ -78,18 +78,26 @@ verify-install: ok: all checks passed
 
 | Field | Fill |
 |---|---|
-| Date (Asia/Shanghai) | |
-| Environment (OS / Agent) | |
-| Install path used | |
-| `verify-install.sh` exit | |
-| Min-input pack used? (link `docs/quickstart-min-input.md`) | |
-| Trigger phrase | |
-| Result (moves / draft / fail) | |
-| Friction / fix | |
+| Date (Asia/Shanghai) | 2026-10-28 |
+| Environment (OS / Agent) | Linux box · Grok Bot + `text-rea` skill |
+| Install path used | clone `Eric-Cqc/text-rea` @ `479a187`；skill via Skill loader |
+| `verify-install.sh` exit | 0 / PASS（dry-run + clean-prefix） |
+| Min-input pack used? | Yes — [`docs/quickstart-min-input.md`](quickstart-min-input.md) + P010 demo |
+| Trigger phrase | `用 text-rea` + 四字段 |
+| Result (moves / draft / fail) | **draft PASS** — 博物馆短说明；见 [`qa-runs/20261028_live-agent_P010.md`](qa-runs/20261028_live-agent_P010.md) |
+| Friction / fix | 全局 skill 路径 ≠ 仓内路径；INSTALL 已写清拷贝＋reload |
 
-### Week1 note
+### Second environment (structural)
 
-Full Agent blind-run of a draft (LLM path) is **optional** for structural Week1 gate. Structural install + verify exit 0 is the hard gate recorded above. A human/Agent Quickstart line can be appended here in Week1 owner time (~45–90 min per Marcus calendar).
+| Field | Fill |
+|---|---|
+| Date (Asia/Shanghai) | 2026-10-28 |
+| Environment | macOS · clone + `verify-install.sh`（见下表推送后回填 exit） |
+| Result | `verify-install.sh` PASS（dry-run + clean-prefix）on macOS worktree；活 LLM 盲跑以 Linux Agent 行为主记录 |
+
+### Note
+
+Live Agent Quickstart is **recorded** above (no longer blank). Structural install + verify remains the CI hard gate; live draft is the human/Agent acceptance row.
 
 ---
 
@@ -106,11 +114,12 @@ No automated LLM fixture in Week1 (Julian: no fake CI matrix). Static path/front
 
 ---
 
-## Known open (not blocking Week1 structural gate)
+## Known open
 
-- Frontmatter still `1.2.0` until release package bumps to `1.3.0` + tag
-- Live Agent Quickstart row above still blank until owner blind-run
-- CI / `tests/` still Week2 (true green only; no fake badge)
+- ~~Frontmatter 1.2.0~~ → **1.3.0** tagged
+- ~~Live Agent Quickstart blank~~ → filled 2026-10-28（P010）
+- 第二 Agent（另一产品 UI）完整盲跑可再追加；不以假 badge 代替
+- 写稿算法未在 1.3.x 变更
 
 ---
 

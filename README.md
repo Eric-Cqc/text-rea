@@ -1,10 +1,12 @@
 # text-rea
 
-**Steal structure, not sentences.**
+**好文章不是写得像，是拆得懂、迁得走。**
 
-An installable Agent Skill that runs writing through **evidence → mechanism → transferable judgment**: close-read a reference for *how* it works, draft from *your* materials, revise along a named reader path.
+**一句话：** 可安装的 Agent Skill——给你**参考文**（学写法）＋**你自己的材料**（管事实），按**指定读者**写成新稿或改稿；拆结构、不抄句子、不编事实。
 
-Compatible with any [`SKILL.md`](https://agentskills.io)-style agent (Codex · Claude Code · Cursor · others).
+**不是：** 通用聊天机器人、求职／面试代写、保证爆款文案。
+
+English: *Steal structure, not sentences.* Evidence → mechanism → transferable judgment. Compatible with any [`SKILL.md`](https://agentskills.io)-style agent (Codex · Claude Code · Cursor · others).
 
 ## Install
 
@@ -28,13 +30,13 @@ Other agents: copy `skills/text-rea/` into that agent’s skills directory; keep
 2. Open your agent; say **text-rea** and paste the four fields in [`docs/quickstart-min-input.md`](docs/quickstart-min-input.md) — or attach **one short reference** + **your own materials** (golden samples under [`skills/text-rea/examples/`](skills/text-rea/examples/)).  
 3. Success looks like: reusable writing moves with locations, **or** a draft where reference owns method and your materials own facts, **or** clarifying questions / unknowns with **no invented facts** — see [`docs/first-run-acceptance.md`](docs/first-run-acceptance.md).
 
-## What you get
+## What you get｜你得到什么
 
 | | |
 |---|---|
-| **Close-read** | Reusable moves with locations — not vibe praise |
-| **Transfer** | Reference owns method; this run’s materials own facts |
-| **Revise** | Edit for a named reader path; full prose when the ask is a draft |
+| **细读** | 可定位的写作动作（不是空泛夸好） |
+| **迁移** | 参考管方法；本次材料管事实 |
+| **成稿／改稿** | 按点名读者路径写出可用正文 |
 
 ## Non-goals
 
@@ -79,7 +81,7 @@ skills/text-rea/
 
 ## Version
 
-See [`CHANGELOG.md`](CHANGELOG.md). Skill metadata version: **1.3.0** (in `SKILL.md`). Tagged **`v1.3.0`**. Product spec: [`docs/PRODUCT_SPEC_1.3.md`](docs/PRODUCT_SPEC_1.3.md).
+See [`CHANGELOG.md`](CHANGELOG.md). Skill metadata version: **1.3.1** (in `SKILL.md`). Tagged **`v1.3.1`**（含 1.3.0 工业门闩＋本补丁）. Product spec: [`docs/PRODUCT_SPEC_1.3.md`](docs/PRODUCT_SPEC_1.3.md).
 
 ## License
 

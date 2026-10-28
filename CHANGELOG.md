@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.3.1 — 2026-10-28
+
+Completeness patch after boss feedback (product clarity + live acceptance).
+
+- README：中文首屏一句话＋非目标；What you get 中英对齐
+- `docs/QA.md`：填入 Live Agent Quickstart（P010）；去掉「仍空白」债
+- `docs/qa-runs/20261028_live-agent_P010.md`：活跑记录与成稿
+
 ## 1.3.0 — 2026-10-28
 
 Industrial hardening (engineering hygiene; no new writing algorithm). Tag `v1.3.0`.
