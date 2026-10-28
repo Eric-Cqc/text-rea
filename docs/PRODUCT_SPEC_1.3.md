@@ -1,6 +1,6 @@
 # text-rea Product Spec 1.3（仓内精简版）
 
-**目标版本**：`1.3.0`（tag `v1.3.0`；本周为工程卫生草稿，frontmatter 仍可为 `1.2.0` 直至发布包定稿）  
+**目标版本**：`1.3.0`（tag `v1.3.0`；工程卫生定稿；frontmatter 已为 `1.3.0`）  
 **一句话产品**：依据材料做结构迁移与定向成稿／改稿的可安装 Agent Skill；非通用聊天、非求职代写。  
 **发布仓**：https://github.com/Eric-Cqc/text-rea  
 **正式入口**：`skills/text-rea/SKILL.md` + `skills/text-rea/agents/openai.yaml`
@@ -42,8 +42,8 @@
 | examples 无「输入＋期望」索引 | **必须** | `skills/text-rea/examples/README.md` |
 | SKILL 相对链到仓外 `research-report-critique` | **必须** | 改为仓内边界声明（见 SKILL） |
 | 错误处理未系统写入 SKILL／README | **必须** | 本周补段落；失败态入口=`docs/failure-modes.md`（TROUBLESHOOTING 别名） |
-| CHANGELOG 无 1.3.0 | **必须（草稿）** | Unreleased／draft 节 |
-| frontmatter 仍 `1.2.0`；无 git tag | 可延后到发布包 | Push #4 |
+| CHANGELOG 1.3.0 | **已定稿** | 2026-10-28 |
+| frontmatter `1.3.0` + tag `v1.3.0` | **已完成** | Push #4 |
 | README 首屏未完全按产品五段锁死 | 可延后 | Push #3（Vivian 五段稿合入） |
 | 无 LLM 评测农场／假 CI badge | **不做** | — |
 

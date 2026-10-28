@@ -2,7 +2,7 @@
 name: text-rea
 description: "依据材料写稿、迁移写法、定向改稿、报告读者审读、作品细读或原创叙事/照片书；日常闲聊和纯格式转换不启动完整流程。"
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # 文字REA

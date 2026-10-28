@@ -79,7 +79,7 @@ skills/text-rea/
 
 ## Version
 
-See [`CHANGELOG.md`](CHANGELOG.md). Skill metadata version: **1.2.0** (in `SKILL.md`). Industrial release **1.3.0** is drafting (Unreleased). Product spec: [`docs/PRODUCT_SPEC_1.3.md`](docs/PRODUCT_SPEC_1.3.md).
+See [`CHANGELOG.md`](CHANGELOG.md). Skill metadata version: **1.3.0** (in `SKILL.md`). Tagged **`v1.3.0`**. Product spec: [`docs/PRODUCT_SPEC_1.3.md`](docs/PRODUCT_SPEC_1.3.md).
 
 ## License
 
