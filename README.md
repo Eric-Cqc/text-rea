@@ -16,6 +16,8 @@ Compatible with any [`SKILL.md`](https://agentskills.io)-style agent — Codex �
 
 ## Install
 
+Full guide + self-check: [`INSTALL.md`](INSTALL.md). After copy, run `bash scripts/verify-install.sh` from the repo root (exit 0 = structural OK).
+
 ### Codex
 
 ```bash
@@ -56,6 +58,8 @@ References teach *moves*. Materials carry *facts*. When you need a teardown, you
 
 ## Examples
 
+Index (input checklist + expected output): [`skills/text-rea/examples/README.md`](skills/text-rea/examples/README.md).
+
 Open anything under [`skills/text-rea/examples/`](skills/text-rea/examples/):
 
 - [`P010_唐三彩载乐骆驼俑.md`](skills/text-rea/examples/P010_唐三彩载乐骆驼俑.md) — museum label from multiple references  
@@ -64,9 +68,27 @@ Open anything under [`skills/text-rea/examples/`](skills/text-rea/examples/):
 
 Samples are method demos, not publications.
 
+## Non-goals
+
+- Job-seeking / interview-prep as the **main** product surface
+- Resume ghostwriting or “guarantee viral copy”
+- Requiring stars, pins, private keys, or a private model key merely to **install**
+- Shipping a separate `research-report-critique` tree inside this repo (not published here)
+
+## Errors and limits
+
+| Failure | Product response |
+|---|---|
+| Installed but never triggers | Confirm folder name is `text-rea` under the agent skills root; reload; `SKILL.md` must exist at that path; run `bash scripts/verify-install.sh` |
+| Idle chat pulled into full pipeline | Full pipeline stays off for casual chat / pure format conversion; ask explicitly for text-rea + materials or reference |
+| Materials insufficient | Ask up to three concrete gaps; mark unknowns; **do not** invent facts |
+| “Just make it sound like X” with no material boundary | Steal structure, not sentences; offer a contrast table or scoped edits; refuse unsourced full imitation |
+
+More: [`INSTALL.md`](INSTALL.md) · [`docs/quickstart-min-input.md`](docs/quickstart-min-input.md) · [`docs/QA.md`](docs/QA.md)
+
 ## Version
 
-See [`CHANGELOG.md`](CHANGELOG.md). Skill metadata version: **1.2.0** (in `SKILL.md`).
+See [`CHANGELOG.md`](CHANGELOG.md). Skill metadata version: **1.2.0** (in `SKILL.md`). Industrial release **1.3.0** is drafting (Unreleased) — see changelog.
 
 ## License
 
