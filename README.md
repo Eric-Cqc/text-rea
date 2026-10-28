@@ -1,63 +1,66 @@
-# text-rea · 文字版 REA
+# text-rea
 
-**好文章不是「写得像」，是「拆得懂、迁得走」。**
+Agent Skill：把「证据 → 机制 → 可迁移判断」用到文字写作——细读与迁移参考写法、按材料成稿、按反馈定向改稿。
 
-写不好，往往不是词穷，是不知道好文章「好在哪、能不能搬走」。text-rea 把「证据→机制→可迁移判断」用到写作：拆参考的写法、用新材料成稿、按读者路径改。开源可装（Skill 1.2.0），附唐三彩说明、国图办卡等脱敏样例。不代写、不伪造出处——只帮你把写法看清、迁走、验收。
+Compatible with any [`SKILL.md`](https://agentskills.io)-style agent（Codex · Claude Code · Cursor 等）。
 
-维护：[Eric-Cqc](https://github.com/Eric-Cqc) · [从这里开始](docs/00_从这里开始.md)
-
----
-
-## 这是什么（方法层）
-
-把「逆向工程任意软件」（REA）那套 **证据 → 机制 → 可迁移判断**，迁到**文字写作**：细读作品、迁移写法、定向改稿、读者审读、原创叙事／说明文。
-
-- 参考文章提供**写法**（问题、组织、表达动作），本次材料支持**事实**；两者分开处理。
-- 需要新稿时交付读者能直接使用的完整正文；需要拆解时给出有位置的动作与适用条件。
-- 日常闲聊和纯格式转换不启动完整流程。
-
-更短的入口：[docs/00_从这里开始.md](docs/00_从这里开始.md) · 用法：[docs/简明用法.md](docs/简明用法.md)
-
-## 怎么装
+## Install
 
 ```bash
+# Codex
 mkdir -p ~/.codex/skills
-cp -R skill ~/.codex/skills/text-rea
+cp -R skills/text-rea ~/.codex/skills/text-rea
 ```
 
-重启或重新加载 skills 后，用自然语言触发：**「用文字版 REA / text-rea」**，附上参考、素材或现稿即可。
+或：
 
-其他 Agent：把 `skill/SKILL.md` 与 `skill/references/` 放进该 Agent 的 skills 约定路径。
-
-## 怎么用（意图级）
-
-1. 细读一篇作品，拆可迁移的写法机制（不是赏析感想）
-2. 把一种写法迁到新题材／新任务
-3. 按读者路径定向改稿
-4. 写说明文／规程／短叙事时，要求证据边界清楚
-
-先看样例：[pilots/](pilots/)（唐三彩说明、国图办卡指南等）
-
-## 目录
-
-```
-skill/       # 可安装 Skill（SKILL.md + agents + references）← 权威执行入口
-docs/        # 给人读的入口与用法
-research/    # 研究摘要、历轮索引、缺口与案例总账
-pilots/      # 公开安全短样例 + 使用记录
-LICENSE      # MIT
-CHANGELOG.md
+```bash
+git clone https://github.com/Eric-Cqc/text-rea.git
+cp -R text-rea/skills/text-rea ~/.codex/skills/text-rea
 ```
 
-结构说明：[docs/结构说明.md](docs/结构说明.md)
+重启／重载 skills 后，用自然语言触发，或显式 `$text-rea`。
 
-## 边界
+Claude Code / 其他 Agent：把 `skills/text-rea/` 拷进该 Agent 的 skills 目录即可。
 
-- **不**代写作业、**不**伪造出处、**不**保证爆款或提分
-- 样例仅供方法演示，非正式出版稿
-- 真实私稿诊断、私人口述任务包、密钥与本机绝对路径**未入库**
-- 配套 skill（若已安装）：`writing-craft`、`personal-memory-album`；本仓不捆绑其正文
+## What's in the skill
 
-## 许可
+```text
+skills/text-rea/
+├── SKILL.md              # required — frontmatter + instructions
+├── agents/
+│   └── openai.yaml       # Codex UI metadata + default prompt
+├── references/           # loaded on demand
+│   ├── writing.md
+│   ├── writing-actions.md
+│   ├── transfer.md
+│   ├── thinking-patterns.md
+│   ├── protocol.md
+│   ├── style-retrieval.md
+│   ├── corpus-profile.md
+│   ├── relation-checks.md
+│   ├── research.md
+│   ├── runbooks.md
+│   ├── harness.md
+│   ├── iteration.md
+│   └── evidence-notes.md
+└── examples/             # short worked samples
+```
 
-MIT © 2026 Eric-Cqc。样例版权与文责归原作者／本仓库维护者；引用请注明出处。
+`name` in frontmatter is `text-rea`（与目录名一致）。`description` 决定何时被选中。
+
+## How it works
+
+成稿主线（见 `SKILL.md`）：
+
+**读者要理解什么 → 本次材料支撑什么 → 参考里可迁移的写法动作 → 写成正文 → 脱离材料重读并修。**
+
+参考管写法；材料管事实。需要拆解时交付有位置的动作；需要新稿时交付完整正文。
+
+## Examples
+
+`skills/text-rea/examples/` 里有脱敏短样例（藏品说明、办卡规程、多来源说明等）。
+
+## License
+
+MIT © 2026 Eric-Cqc

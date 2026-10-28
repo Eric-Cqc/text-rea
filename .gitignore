@@ -1,11 +1,5 @@
 .DS_Store
-*.pem
-*.key
 .env
 .env.*
-**/credentials*
-**/*secret*
-**/*token*
-*.zip
-__pycache__/
-.venv/
+*.pem
+*.key

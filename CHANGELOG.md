@@ -1,15 +1,6 @@
 # Changelog
 
-## v1.2.0 — 公开仓整理（2026-10-28）
+## 1.2.0
 
-- 以正式可安装 Skill（`skill/`，frontmatter version **1.2.0**）为权威入口整理公开发布包
-- 文档入口改为本仓相对路径：`docs/00_从这里开始.md`、`docs/简明用法.md`、`docs/结构说明.md`
-- 研究侧只收综合报告、来源目录、历轮**索引**、六类缺口与案例总账；不整仓塞入每一轮正文
-- `pilots/` 仅保留公开安全短样例与对应使用记录；排除真实私稿／私人口述任务包
-- 去掉 Skill 内 Mac 绝对路径；改为配套 skill 名称说明
-- 许可：MIT，Copyright (c) 2026 Eric-Cqc
-
-## v1.2.0+socmed — README 人话首页（2026-10-28）
-
-- 首屏改为 ToC 钩子 + 人话段；安装与方法层下沉
-- 边界补「不保证爆款或提分」
+- Publish as a standard Agent Skill layout: `skills/text-rea/{SKILL.md,agents,references,examples}`
+- Align install path with Codex / Claude Code conventions
