@@ -26,7 +26,7 @@ Other agents: copy `skills/text-rea/` into that agent’s skills directory; keep
 
 1. Install and reload (above).  
 2. Open your agent; say **text-rea** and paste the four fields in [`docs/quickstart-min-input.md`](docs/quickstart-min-input.md) — or attach **one short reference** + **your own materials** (golden samples under [`skills/text-rea/examples/`](skills/text-rea/examples/)).  
-3. Success looks like: reusable writing moves with locations, **or** a draft where reference owns method and your materials own facts — see [`docs/first-run-acceptance.md`](docs/first-run-acceptance.md).
+3. Success looks like: reusable writing moves with locations, **or** a draft where reference owns method and your materials own facts, **or** clarifying questions / unknowns with **no invented facts** — see [`docs/first-run-acceptance.md`](docs/first-run-acceptance.md).
 
 ## What you get
 
