@@ -77,6 +77,8 @@ Samples are method demos, not publications.
 
 ## Errors and limits
 
+Full failure playbook: [`docs/failure-modes.md`](docs/failure-modes.md).
+
 | Failure | Product response |
 |---|---|
 | Installed but never triggers | Confirm folder name is `text-rea` under the agent skills root; reload; `SKILL.md` must exist at that path; run `bash scripts/verify-install.sh` |
