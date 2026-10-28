@@ -1,0 +1,17 @@
+name: verify-install
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Structural install self-check
+        run: bash scripts/verify-install.sh --dry-run
+      - name: Clean-prefix install self-check
+        run: bash scripts/verify-install.sh
