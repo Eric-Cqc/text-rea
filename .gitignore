@@ -6,3 +6,6 @@
 **/credentials*
 **/*secret*
 **/*token*
+*.zip
+__pycache__/
+.venv/

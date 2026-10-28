@@ -23,8 +23,8 @@ metadata:
 
 ## 特定文类
 
-- 作品细读、文风研究或原创随笔/故事：[writing-craft](/Users/a1/.codex/skills/writing-craft/SKILL.md)，只借一般写作方法，不复刻在世作者独特文风。
-- 作者口述、选定照片、回忆录与旅行照片书：[personal-memory-album](/Users/a1/.codex/skills/personal-memory-album/SKILL.md)，保留作者事实、选图和认可正文；布局修改不自动重写。
+- 作品细读、文风研究或原创随笔/故事：配套 skill `writing-craft`（若已安装），只借一般写作方法，不复刻在世作者独特文风。
+- 作者口述、选定照片、回忆录与旅行照片书：配套 skill `personal-memory-album`（若已安装），保留作者事实、选图和认可正文；布局修改不自动重写。
 
 ## 在主线需要处取用
 
