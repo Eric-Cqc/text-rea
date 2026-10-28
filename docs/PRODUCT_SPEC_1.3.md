@@ -41,10 +41,10 @@
 | 无 Quickstart 最小输入包 | **必须** | `docs/quickstart-min-input.md` |
 | examples 无「输入＋期望」索引 | **必须** | `skills/text-rea/examples/README.md` |
 | SKILL 相对链到仓外 `research-report-critique` | **必须** | 改为仓内边界声明（见 SKILL） |
-| 错误处理未系统写入 SKILL／README | **必须** | 本周补段落 |
+| 错误处理未系统写入 SKILL／README | **必须** | 本周补段落；失败态入口=`docs/failure-modes.md`（TROUBLESHOOTING 别名） |
 | CHANGELOG 无 1.3.0 | **必须（草稿）** | Unreleased／draft 节 |
 | frontmatter 仍 `1.2.0`；无 git tag | 可延后到发布包 | Push #4 |
-| README 首屏未完全按产品五段锁死 | 可延后 | Week2 D9–D10 |
+| README 首屏未完全按产品五段锁死 | 可延后 | Push #3（Vivian 五段稿合入） |
 | 无 LLM 评测农场／假 CI badge | **不做** | — |
 
 ---

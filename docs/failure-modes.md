@@ -38,8 +38,38 @@ Product-facing failure states (Vivian four classes). Skill behavior should match
 | **Do** | Restate: steal **structure**, not sentences. Offer a contrast against a named reference **or** edit within provided materials; refuse unsourced imitation of a living author’s unique voice |
 | **Confirm** | No sentence-level pastiche of a named living writer; materials vs reference roles stay separate |
 
+
+## 5. Companion path / skill missing (e.g. research-report-critique)
+
+| | |
+|---|---|
+| **Symptom** | Expectation that a critique companion ships inside this repo |
+| **Likely cause** | Old docs linked `../research-report-critique/` |
+| **Do** | Core writing path still runs. Companion is **not shipped here** — use only if already installed elsewhere; otherwise stay on text-rea mainline |
+| **Confirm** | `SKILL.md` has no broken relative link to that companion; README Non-goals mentions it |
+
+## 6. Parent-directory / flatten trap on copy
+
+| | |
+|---|---|
+| **Symptom** | `verify-install.sh` fails, or the agent sees loose files instead of a skill folder |
+| **Likely cause** | `cp` run from inside the clone; or `SKILL.md` flattened into the skills root |
+| **Do** | From the **parent** of the clone: `cp -R text-rea/skills/text-rea <skills-root>/text-rea`. Keep directory name `text-rea` |
+| **Confirm** | `<skills-root>/text-rea/SKILL.md` exists; `bash scripts/verify-install.sh` from a full clone exits 0 |
+
+## 7. `verify-install.sh` exits non-zero
+
+| | |
+|---|---|
+| **Symptom** | Self-check prints `verify-install: FAIL — …` |
+| **Likely cause** | Incomplete copy; missing golden examples / `examples/README.md`; wrong folder name |
+| **Do** | Read stderr; re-copy the whole `skills/text-rea/` tree; from clone root run `bash scripts/verify-install.sh` (optional `--dry-run`) until PASS |
+| **Confirm** | Exit code 0 and a `PASS` line |
+
 ## Related
 
 - Minimal input template: [quickstart-min-input.md](quickstart-min-input.md)
 - Install: [../INSTALL.md](../INSTALL.md)
 - QA log: [QA.md](QA.md)
+- Alias index: [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
+- First-run acceptance: [first-run-acceptance.md](first-run-acceptance.md)

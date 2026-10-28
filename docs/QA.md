@@ -109,5 +109,27 @@ No automated LLM fixture in Week1 (Julian: no fake CI matrix). Static path/front
 ## Known open (not blocking Week1 structural gate)
 
 - Frontmatter still `1.2.0` until release package bumps to `1.3.0` + tag
-- README first-screen five-block lock (Vivian D9–D10) not fully rewritten
 - Live Agent Quickstart row above still blank until owner blind-run
+- CI / `tests/` still Week2 (true green only; no fake badge)
+
+---
+
+## D6–D10 friction log (Push #2｜Asia/Shanghai)
+
+Baseline after Adrian Week1b: `origin/main` = `61793db` (on top of Push #1 `d7188af`).
+
+| # | Evidence | Fix |
+|---|---|---|
+| F1 | `INSTALL.md` still documented `TEXT_REA_SKILL_DIR=… bash verify-install.sh` and implied bare skill-path use; Week1b script is **clone-rooted** and only accepts `--dry-run` / `--prefix` | Rewrote INSTALL self-check to match real CLI; dropped false env/positional docs |
+| F2 | Full-clone verify did not assert product docs exist | Docs gate: QA / quickstart / failure-modes / PRODUCT_SPEC / first-run-acceptance / TROUBLESHOOTING |
+| F3 | `docs/failure-modes.md` had 4 classes; Clara industrial bar asked TROUBLESHOOTING≥5 | Expanded failure-modes to 7; added `docs/TROUBLESHOOTING.md` as alias index |
+| F4 | No standalone 「Acceptance of a first run」 page (Vivian draft pointed at wrong place) | Added `docs/first-run-acceptance.md`; linked from quickstart / INSTALL / README |
+| F5 | README still What-you-get-before-Install (not Vivian five-block) | Push #3 README rewrite (separate list) |
+
+### Run D — after Push #2 local edits
+
+- **When**: 2026-10-28 ~14:30 CST
+- **Commands**: `bash scripts/verify-install.sh --dry-run` ; `bash scripts/verify-install.sh`
+- **Exit**: 0 / 0 (expect `repo docs OK` line + `PASS`)
+- **Notes**: no push; no tag
+

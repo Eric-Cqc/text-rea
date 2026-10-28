@@ -29,31 +29,24 @@ Copy `skills/text-rea/` into that agent’s skills root. Keep the directory name
 
 ## Install self-check
 
-From the **repository root** (the clone), or from the installed skill’s **parent of `skills/`** layout that mirrors this repo:
+From the **repository root** (the clone):
 
 ```bash
-bash scripts/verify-install.sh
+bash scripts/verify-install.sh           # in-tree checks + clean-prefix copy simulation
+bash scripts/verify-install.sh --dry-run # in-tree only (faster)
+bash scripts/verify-install.sh --prefix /tmp/my-prefix  # simulate install into /tmp/my-prefix/text-rea
 ```
 
-- Exit **0** → required paths, frontmatter `name`/`version`, `agents/openai.yaml`, and golden example paths are present.
+- Exit **0** + `PASS` → frontmatter `name`/`version`, `agents/openai.yaml`, references, golden examples, examples index, and (full clone) product docs are present; clean-prefix copy also validates unless `--dry-run`.
 - Non-zero → stderr names the missing or invalid item; fix before claiming install success.
 
-### Checking an installed copy only
-
-If you only copied `skills/text-rea` into `~/.codex/skills/text-rea` and do not have the full clone:
-
-```bash
-# from anywhere — point at the installed skill directory
-TEXT_REA_SKILL_DIR=~/.codex/skills/text-rea bash /path/to/clone/scripts/verify-install.sh
-```
-
-Or copy `scripts/verify-install.sh` next to the skill and run with `TEXT_REA_SKILL_DIR` set.
+> The checker is **clone-rooted** (`scripts/` → repo root → `skills/text-rea`). It does **not** take `TEXT_REA_SKILL_DIR` or a bare skill-path argument. After you `cp` into `~/.codex/skills/text-rea`, keep a clone handy and re-run from that clone, or use `--prefix` to simulate the install layout.
 
 ## After install: 30-second run
 
 1. Open [`docs/quickstart-min-input.md`](docs/quickstart-min-input.md).
 2. In the Agent, say you want **text-rea** and paste the four fields (材料／参考／读者／成功标准).
-3. Success looks like: located writing moves and/or a short draft that keeps **reference = method**, **materials = facts**. See [`docs/QA.md`](docs/QA.md).
+3. Success looks like: located writing moves and/or a short draft that keeps **reference = method**, **materials = facts**. See [`docs/first-run-acceptance.md`](docs/first-run-acceptance.md) and [`docs/QA.md`](docs/QA.md).
 
 ## Troubleshooting
 
@@ -62,6 +55,7 @@ Or copy `scripts/verify-install.sh` next to the skill and run with `TEXT_REA_SKI
 | Skill never triggers | Directory name must be `text-rea`; must sit under the agent’s skills root; reload skills; confirm `SKILL.md` exists at that path |
 | `verify-install.sh` fails | Read stderr; re-copy the whole `skills/text-rea/` tree (do not flatten files into the skills root) |
 | Parent-directory trap | `cp -R text-rea/skills/text-rea …` must be run from the **parent** of the clone |
+| Product failure modes (4+) | See [`docs/failure-modes.md`](docs/failure-modes.md) (alias: [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md)) |
 
 ## Non-goals of install
 

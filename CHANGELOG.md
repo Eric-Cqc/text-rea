@@ -11,6 +11,11 @@ Industrial hardening toward tag `v1.3.0` (engineering hygiene; no new writing al
 - Document refuse/degrade behavior in `SKILL.md` and README (缺材料／缺参考／闲聊／只要润色)
 - Declare `research-report-critique` companion **not shipped in this repo** (remove broken relative link)
 - README: Non-goals + Errors and limits (no job-prep main product narrative)
+- Add `docs/failure-modes.md` playbook + stronger `verify-install.sh` (`--dry-run` / `--prefix`) [Week1b]
+- Fix INSTALL↔script mismatch (remove undocumented `TEXT_REA_SKILL_DIR`); document `--dry-run` / `--prefix`
+- Expand failure-modes to ≥5; add `docs/TROUBLESHOOTING.md` alias + `docs/first-run-acceptance.md`
+- `verify-install.sh` full-clone docs gate (QA / quickstart / failure-modes / PRODUCT_SPEC / first-run-acceptance / TROUBLESHOOTING)
+- README: product five-block install-state front (Install → 30s → What you get)
 
 *Metadata `version` and git tag remain at 1.2.0 until the release package (Week2) freezes 1.3.0.*
 

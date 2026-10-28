@@ -110,6 +110,21 @@ check_skill_tree() {
 info "repo root: ${REPO_ROOT}"
 check_skill_tree "${SKILL_SRC}" "in-tree"
 
+# Full-clone docs gate (product docs required next to INSTALL.md)
+if [[ -f "${REPO_ROOT}/INSTALL.md" ]]; then
+  for doc in \
+    docs/QA.md \
+    docs/quickstart-min-input.md \
+    docs/failure-modes.md \
+    docs/PRODUCT_SPEC_1.3.md \
+    docs/first-run-acceptance.md \
+    docs/TROUBLESHOOTING.md
+  do
+    [[ -f "${REPO_ROOT}/${doc}" ]] || die "missing ${doc} (full clone)"
+  done
+  info "repo docs OK (QA / quickstart / failure-modes / PRODUCT_SPEC / first-run-acceptance / TROUBLESHOOTING)"
+fi
+
 if [[ "${DRY_RUN}" -eq 1 ]]; then
   info "dry-run: skipped clean-prefix copy"
   info "PASS"

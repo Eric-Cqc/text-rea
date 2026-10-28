@@ -45,6 +45,8 @@ What does “done” look like for this run?
 
 ## Acceptance of a first run
 
+Canonical checklist: [`first-run-acceptance.md`](first-run-acceptance.md).
+
 A successful first run produces **at least one** of:
 
 1. **Located moves** — writing actions tied to places in the reference; or  
