@@ -1,0 +1,4 @@
+interface:
+  display_name: "文字REA"
+  short_description: "从材料成文、拆解迁移参考写法、匹配本人文风，并按反馈定向修订"
+  default_prompt: "用 $text-rea 处理我提供的材料和参考，按这次用途完成正文或修订稿。"
